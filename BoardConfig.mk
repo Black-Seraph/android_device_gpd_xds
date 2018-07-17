@@ -19,8 +19,6 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_ARCH_VARIANT_CPU := cortex-a7
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
 # Kernel
