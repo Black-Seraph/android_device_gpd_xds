@@ -1,0 +1,6 @@
+[
+  {
+    "repository": "android_kernel_mt8176_common",
+    "target_path": "kernel/gpd/xds"
+  }
+]
