@@ -3,7 +3,6 @@ etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/wpa_supplicant.conf
 etc/firmware/md32_d.bin
 etc/firmware/md32_p.bin
-vendor/etc/audio_param
 vendor/etc/audio_param/AudioParamOptions.xml
 vendor/etc/mtk_omx_core.cfg
 vendor/etc/vold.fstab

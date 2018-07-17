@@ -6,7 +6,6 @@ TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_SMP := true
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
@@ -14,17 +13,18 @@ TARGET_2ND_CPU_VARIANT := cortex-a15
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 
-TARGET_USES_64BIT_BINDER := true
-ARCH_ARM_HAVE_TLS_REGISTER := true
+TARGET_USES_64_BIT_BINDER := true
+ARCH_ARM_HAVE_NEON := true
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
-TARGET_CPU_MEMCPY_OPT_DISABLE := true
+TARGET_BOOTLOADER_BOARD_NAME := mt8173
+TARGET_IS_64_BIT := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_OFFSET := 0x00080000
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x0E000000
@@ -82,6 +82,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 26251096064
 BOARD_CACHEIMAGE_PARTITION_SIZE := 1610612736
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
+BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Power
 TARGET_HAS_NO_WIFI_STATS := true
@@ -89,20 +90,6 @@ TARGET_HAS_NO_WIFI_STATS := true
 # Recovery
 TARGET_RECOVERY_FSTAB := device/gpd/xds/rootdir/root/fstab.mt8173
 TARGET_USERIMAGES_USE_EXT4 := true
-
-# TWRP stuff (Not ready yet... dummy placeholder taken from sprout.)
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_DEFAULT_EXTERNAL_STORAGE := true
-TW_INCLUDE_JB_CRYPTO := true
-TW_CRYPTO_FS_TYPE := "ext4"
-TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/mtk-msdc.0/by-name/userdata"
-TW_CRYPTO_MNT_POINT := "/data"
-TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-TW_MAX_BRIGHTNESS := 255
-TW_NO_USB_STORAGE := true
 
 # SELinux (I wish... but we aren't that far yet.)
 BOARD_SEPOLICY_DIRS += device/gpd/xds/sepolicy
