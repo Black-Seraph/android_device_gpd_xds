@@ -15,4 +15,4 @@ Display | 5" 1280 x 720 px
 
 ![GPD XD+](https://www.geeky-gadgets.com/wp-content/uploads/2018/01/GPD-XD-Handheld-Android-Game-Console.jpg "GPD XD+")
 
-This is a WIP branch for building Lineage OS 15.1 (or Android Oreo AOSP based) ROMS.
+This is a WIP branch for building Lineage OS 14.1 (or Android Nougat AOSP based) ROMS.
