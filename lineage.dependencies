@@ -3,7 +3,7 @@
     "remote": "github",
     "repository": "Black-Seraph/android_kernel_mt8176_common",
     "target_path": "kernel/gpd/xds",
-    "revision": "lineage-14.1"
+    "revision": "master"
   },
   {
     "remote": "github",

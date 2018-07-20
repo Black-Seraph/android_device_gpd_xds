@@ -50,7 +50,7 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Common stuff
-$(call inherit-product, device/mediatek/mt8173-common)
+$(call inherit-product, device/mediatek/mt8173-common/mt8173.mk)
 
 # Vendor
 $(call inherit-product, vendor/gpd/xds/xds-vendor.mk)
