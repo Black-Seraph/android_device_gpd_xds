@@ -8,6 +8,8 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 # Recovery allowed devices
 TARGET_OTA_ASSERT_DEVICE := xds
 
+# TARGET_SKIP_OTA_PACKAGE := true
+
 PRODUCT_PACKAGES += \
    libmtk_symbols \
    libstlport
